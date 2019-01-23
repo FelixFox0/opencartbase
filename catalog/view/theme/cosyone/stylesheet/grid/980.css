@@ -1,0 +1,52 @@
+/* layout */
+.outer_container.boxed {
+	width:1040px;
+}
+body {
+	min-width:1000px; /* if responsive layout is disabled */
+}
+.container, .breadcrumb, #menu, .header_right {
+	max-width:980px;
+}
+
+#home-top-left .wrapper, #home-top-right .wrapper {
+	width:320px;
+}
+#menu > ul > li > a, #menu > ul > li.withsubs > a {
+	padding: 0 15px;
+}
+#menu > ul > li i {
+    margin-left: 5px;
+}
+#menu > ul > li.custom_block .menu_drop_down {
+	max-width:980px !important;
+}
+.shortcut .shortcut_heading .total {
+	display:none;
+}
+.header3 .shortcuts_wrapper {
+	margin-left:50px;
+}
+.box.newsletter.boxed .inner .heading {
+	font-size:26px;
+}
+/* Product page */ 
+
+.product-info .image, .mousetrap, .image-additional {
+	max-width: 300px !important;
+}
+.product-info .right  {
+	margin-left: 300px !important;
+}
+.product-info > .custom_right_column .brand {
+	margin-bottom:25px;
+}
+/* Product carousels */
+.box-product.carousel > div {
+	padding:5px 10px 0px 10px;
+	width: 192px; 
+}
+/* Product list view */
+.product-list .image, .product-list .image_hover {
+	max-width:230px;	
+}

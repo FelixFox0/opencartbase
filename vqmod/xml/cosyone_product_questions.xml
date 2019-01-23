@@ -1,0 +1,88 @@
+<modification>
+	<id>Product Questions</id>
+	<version>OC 2.x</version>
+	<vqmver>2.0.0</vqmver>
+	<author>Karl Pers - openthemer@gmail.com</author>
+	<file name="catalog/controller/product/product.php">
+		<operation>
+			<search position="after"><![CDATA[
+			$this->model_catalog_product->updateViewed($this->request->get['product_id']);
+			]]></search>
+			<add><![CDATA[
+			$data['question_status'] = $this->config->get('product_question_status');
+			$data['product_questions'] = $this->load->controller('product/question');
+			$this->load->language('product/question');
+			$data['tab_questions'] = $this->language->get('tab_questions');
+			$data['button_ask'] = $this->language->get('button_ask');
+			$this->load->model('catalog/question');
+			$data['questions_total'] = $this->model_catalog_question->getTotalQuestionsByProductId($this->request->get['product_id']);
+			]]></add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/*/template/product/product.tpl">
+		<operation error="log">
+			<search position="before" index="1"><![CDATA[
+			<?php if ($attribute_groups) { ?>
+			]]></search>
+			<add><![CDATA[
+			<?php if ($question_status) { ?>
+            <li id="product-question"><a href="#tab-questions" data-toggle="tab"><?php echo $tab_questions; ?> (<?php echo $questions_total; ?>)</a></li>
+            <?php } ?>
+			]]></add>
+		</operation>
+		<operation error="log">
+			<search position="after"><![CDATA[
+			<div class="tab-content">
+			]]></search>
+			<add><![CDATA[
+			<?php if ($question_status) { ?>
+          	<div class="tab-pane" id="tab-questions">
+          	<?php echo $product_questions; ?>
+			</div>
+          	<?php } ?>
+			]]></add>
+		</operation>
+		<operation error="log">
+			<search position="after" error="skip"><![CDATA[
+			<i class="fa fa-arrow-right"></i><i class="fa fa-arrow-left main_compare">
+			]]></search>
+			<add><![CDATA[
+			<?php if ($question_status) { ?>
+			<a id="button_ask" onclick="$('a[href=\'#tab-questions\']').trigger('click');" class="sq_icon" data-tooltip="<?php echo $button_ask; ?>"><i class="fa fa-question"></i>&nbsp;</a>
+			<?php } ?>
+			]]></add>
+		</operation>
+	</file>
+	<file name="admin/controller/common/menu.php">
+		<operation>
+			<search position="after"><![CDATA[
+			$this->load->language('common/menu');
+			]]></search>
+			<add><![CDATA[
+			$this->load->language('catalog/question');
+			$data['question_url'] = $this->url->link('catalog/question', 'token=' . $this->session->data['token'], 'SSL');
+			$data['question_menu'] = $this->language->get('question_menu');
+			]]></add>
+		</operation>
+	</file>
+	<file name="admin/view/template/common/menu.tpl">
+		<operation>
+			<search position="after"><![CDATA[
+			<li><a href="<?php echo $information; ?>"><?php echo $text_information; ?></a></li>
+			]]></search>
+			<add><![CDATA[
+			<li><a href="<?php echo $question_url; ?>"><?php echo $question_menu; ?></a></li>
+			]]></add>
+		</operation>
+	</file>
+	<file name="admin/model/catalog/product.php">
+		<operation>
+			<search position="after"><![CDATA[
+			$this->db->query("DELETE FROM " . DB_PREFIX . "product WHERE product_id = '" . (int)$product_id . "'");
+			]]></search>
+			<add><![CDATA[
+			$this->db->query("DELETE FROM " . DB_PREFIX . "question WHERE product_id = '" . (int)$product_id . "'");
+			]]></add>
+		</operation>
+	</file>
+</modification>

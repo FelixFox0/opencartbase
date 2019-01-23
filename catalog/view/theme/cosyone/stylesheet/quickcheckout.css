@@ -1,0 +1,213 @@
+#content {
+	margin-bottom:30px;
+}
+.row .form-control {
+	margin-bottom:8px;
+}
+#payment-address .box-heading, #shipping-method .box-heading, #payment-method .box-heading, #cart1 .box-heading {
+	padding:7px 0 5px;
+}
+
+
+#payment-address .box-heading:before, #shipping-method .box-heading:before, #payment-method .box-heading:before, #cart1 .box-heading:before {
+	width:30px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	background:#222222;
+	color:#ffffff;
+	display:inline-block;
+	margin-right:10px;
+	content:"or";
+	vertical-align:baseline;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+}
+#payment-address .box-heading:before {
+	content:"1";
+}
+#shipping-method .box-heading:before {
+	content:"2";
+}
+#payment-method .box-heading:before {
+	content:"3";
+}
+#cart1 .box-heading:before {
+	content:"4";
+}
+.table tr.options-list {
+	border-bottom:7px solid #ffffff;
+}
+.table > tbody > tr > td {
+	padding:0px 0px 4px 0px;
+	border-top:0;
+	border-top:none;
+}
+.shipping-sum {
+	font-weight:400;
+	color:#222222;
+}
+#shipping-method table td b, #payment-method table td b {
+	font-weight:500;
+	color:#555555;
+}
+.radio.payment {
+	padding-left:0;
+}
+.radio.payment input[type="radio"] {
+	margin-left:0;
+}
+table.radio.payment tr.highlight td {
+	vertical-align:middle;
+	padding-bottom:2px;
+	padding-top:8px;
+}
+table.radio.payment tr.highlight:last-child td {
+	padding-bottom:15px;
+}
+.html_header {
+	display:block;
+	margin-bottom:15px;
+}
+
+#login-box {
+	
+	margin-bottom:15px;
+}
+.grid_holder {
+	font-size:0;
+}
+.checkout-column {
+	display:inline-block;
+	margin:0px 0px 30px 0px;
+	padding:0 15px;
+	vertical-align:top;
+	font-size:14px;
+}
+.quickcheckout-content {
+	padding: 0;
+	text-align:left;
+	margin-bottom: 10px;
+}
+.field_holder {
+	margin-left:-15px;
+	margin-right:-15px;
+	font-size:0;
+}
+.field {
+	color:#555555;
+	margin-bottom:10px;
+	padding:0 15px;
+	font-size:14px;
+	width:50%;
+	display:inline-block;
+	vertical-align:top;
+}
+.contrast_font.input_heading {
+	color:#555555;
+}
+.field input, .field select {
+	margin-top:2px;
+}
+#shipping-method {
+	margin-bottom:25px;
+}
+.hide {
+	display: none !important;
+}
+table.quickcheckout-cart {
+	width: 100%;
+	border-collapse: collapse;
+	border-top: 1px solid #F0F0F2;
+	border-left: 1px solid #F0F0F2;
+	border-right: 1px solid #F0F0F2;
+}
+
+.quickcheckout-cart thead td {
+	background-color: #F9F9FA;
+	border-bottom: 1px solid #F0F0F2;
+	color: #595959;
+	font-weight: bold;
+	text-align: left;
+	padding: 15px;
+}
+.quickcheckout-cart tbody td {
+	border-bottom: 1px solid #F0F0F2;
+	vertical-align: top;
+	padding: 15px;
+}
+.quickcheckout-cart td.image {
+	width: 10%;
+}
+.quickcheckout-cart td.image img {
+	border: 1px solid #F0F0F2;
+}
+.quickcheckout-cart td.name {
+	width: 30%;
+	text-align: left;
+}
+.quickcheckout-cart td.quantity {
+	width: 25%;
+	text-align: left;
+}
+.quickcheckout-cart td.quantity input {
+	margin-right:3px;
+}
+.quickcheckout-cart td.quantity > a {
+	position: relative;
+	cursor: pointer;
+}
+.quickcheckout-cart td.unit-price {
+	text-align: right;
+	width: 17.5%;
+}
+.quickcheckout-cart td.total {
+	width: 17.5%;
+	text-align: right;
+	padding-right: 10px;
+}
+.quickcheckout-cart tr.totals td {
+	padding:10px 15px;
+}
+.quickcheckout-cart tr.totals:last-child td {
+	font-weight:bold;
+}
+#voucher-heading, #coupon-heading, #reward-heading {
+	background-color: #F9F9FA;
+	border: 1px solid #F0F0F2;
+	cursor: pointer;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 5px;
+}
+
+#voucher-content {
+	display: none;
+	margin-bottom:5px;
+}
+#coupon-content {
+	display: none;
+	margin-bottom:15px;
+}
+#reward-content {
+	display: none;
+	margin-bottom:15px;
+}
+#voucher-content input[type='text'], #coupon-content input[type='text'], #reward-content input[type='text'] {
+	width:160px;
+}
+.checkout-content {
+	display: block !important;
+}
+#terms .quickcheckout-content {
+	border:1px solid #F0F0F2;
+	padding:15px;
+	text-align:right;
+}
+.confirm {
+	display:inline-block;
+}
+.checkout-product thead td, .checkout-product tbody td, .checkout-product tfoot td {
+	border-bottom:1px solid #F0F0F2;
+}

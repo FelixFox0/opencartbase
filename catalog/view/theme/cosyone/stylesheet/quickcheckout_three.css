@@ -1,0 +1,47 @@
+.checkout-column {
+	width:31%;
+	padding-right:20px;
+}
+.checkout-column.cart {
+	width:38%;
+	padding-right:15px;
+}
+.col-sm-6 {
+	width: 100%;
+}
+#login .col-sm-6 {
+	width: 50%;
+}
+
+table.quickcheckout-cart {
+	overflow: auto;
+}
+.quickcheckout-cart thead td, .quickcheckout-cart tbody td {
+	padding: 10px 8px;
+}
+.quickcheckout-cart td.quantity a.sq_icon {
+	width:16px;
+	border:none;
+	font-size:14px;
+	margin-right:0;
+	white-space:nowrap;
+}
+.quickcheckout-cart td.image img {
+	width: 40px;
+	height: auto;
+}
+#terms .quickcheckout-content {
+	padding:15px 10px;
+	text-align:left;
+}
+#terms .quickcheckout-content .confirm {
+	width:100%;
+	text-align:right;
+	border-top:1px solid #F0F0F2;
+	margin-top:14px;
+	padding-top:10px;
+}
+#terms .quickcheckout-content input[type='checkbox'] {
+	float:left;
+	margin-right:5px;
+}

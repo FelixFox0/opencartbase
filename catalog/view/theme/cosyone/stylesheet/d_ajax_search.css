@@ -1,0 +1,79 @@
+#ajax_search_results {
+	margin:0px;
+	text-align:left !important;
+	position: absolute;
+	left:1px;
+	list-style-type: none;
+	z-index:1005;
+	width:237px;
+	font-size:13px;
+	background-color: #ffffff;
+	border:1px solid #e5e5e5;
+	display:table;
+}
+#ajax_search_results .s_row {
+	position:relative;
+	display:block;
+	z-index:13005;
+	width:237px;
+	padding:8px 0;
+}
+#ajax_search_results .link {
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	width:237px;
+	height:100%;
+	display:inline-block;
+	position:absolute;
+}
+
+#ajax_search_results .s_row:hover {
+	background:#f9f9fa;
+}
+#ajax_search_results a {
+	display:block;
+}
+#ajax_search_results .selected {
+	color: #AF2645;
+	background-color: #ebebeb;
+}
+#ajax_search_results .s_cell {
+	display:table-cell;
+	vertical-align:middle;
+	padding:0 6px;
+}
+#ajax_search_results .live_image {
+	min-width:55px;
+	text-align:center;
+}
+#ajax_search_results .live_image img {
+	display: inline-block;
+	min-width:40px;
+}
+#ajax_search_results .live_name {
+	width:100%;
+	padding:0 5px;
+}
+#ajax_search_results .live_price {
+	text-align:right;
+}
+#ajax_search_results .live_price p {
+	white-space:nowrap;
+	min-width:40px;
+	margin:0;
+}
+#ajax_search_results .special {
+	margin-top:0px;
+	margin-bottom:0px;
+	white-space:nowrap;
+	min-width:40px;
+}
+#ajax_search_results .old-price {
+	color: #8c8c8c;
+	font-size:11px;
+	text-decoration:line-through;
+	white-space:nowrap;
+	min-width:40px;
+	}

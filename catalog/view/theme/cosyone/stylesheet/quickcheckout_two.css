@@ -1,0 +1,27 @@
+.checkout-column {
+	width:50%;
+}
+#payment-method {
+	margin-bottom:25px;
+}
+.quickcheckout-cart td.quantity a.sq_icon {
+	width:20px;
+	border:none;
+	font-size:14px;
+	margin-right:0;
+}
+#terms .quickcheckout-content .confirm {
+	width:100%;
+	text-align:right;
+	border-top:1px solid #F0F0F2;
+	margin-top:14px;
+	padding-top:10px;
+}
+#terms .quickcheckout-content {
+	padding:15px 10px;
+	text-align:left;
+}
+#terms .quickcheckout-content input[type='checkbox'] {
+	float:left;
+	margin-right:5px;
+}

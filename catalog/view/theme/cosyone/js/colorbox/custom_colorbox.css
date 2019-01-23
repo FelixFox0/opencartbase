@@ -1,0 +1,39 @@
+/* ColorBox Core Style
+-------------------------------------------------------------- */
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden; outline:none; }
+#cboxOverlay{position:fixed; width:100%; height:100%; overflow:hidden;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none; }
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box;}
+
+/* ColorBox skin.
+   The following styles are ordered & tabbed
+   in a way that represents the nesting of the generated HTML.
+-------------------------------------------------------------- */
+#cboxOverlay{background:#333333}
+#colorbox{}
+    #cboxContent{background:#fff; overflow:hidden; border:none;/*10px solid #333*/ padding:20px;  }
+	.quickview #cboxContent{padding-right:0px; }
+        .cboxIframe{background:#fff;}
+        #cboxError{padding:50px; border:1px solid #ccc;}
+        #cboxLoadedContent{}
+        #cboxTitle{display:none !important;}
+        #cboxCurrent{display:none !important;}
+        #cboxSlideshow{display:none;}
+		
+		#cboxPrevious, #cboxNext { position:absolute; top:50%; margin-top:-40px; display:none; text-indent:-9999px; }
+		#cboxPrevious { left:40px; }
+		#cboxNext { right:90px; }
+		#cboxPrevious:after, #cboxNext:after { font-family:fontAwesome; font-size:30px; line-height:46px; text-align:center; background:#ffffff; position:absolute; display:block; width:50px; height:50px; text-indent:0; color:#222222; transition:all 300ms }
+		#cboxPrevious:after { content:"\f104";}
+		#cboxNext:after { content:"\f105";}
+		#cboxPrevious:hover:after, #cboxNext:hover:after, #cboxClose:hover:after { color:#ffffff; background:#222222; transition:all 300ms}
+		
+		#cboxClose{ position:absolute; font-size:0; top:20px; right:50px; text-indent:-9999px;}
+		#cboxClose:after { content:"\f105 \f104"; font-family: fontAwesome; letter-spacing:-2px; font-size:18px; line-height:28px; text-align:center; background:#ffffff; position:absolute; display:block; width:30px; height:30px; text-indent:0; color:#222222; transition:all 300ms}

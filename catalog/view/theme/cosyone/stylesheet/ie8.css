@@ -1,0 +1,14 @@
+/* God I hate Microsoft! */
+.nivo-directionNav a {
+	display:none;
+}
+.slider-wrapper:hover .nivo-directionNav a {
+	display:block;
+}
+.header_top #search input {
+	padding: 6px 27px 3px 5px;
+	height:18px;
+}
+
+.product-info .clean-option-image input[type="radio"] {display:block; margin:5px auto;}
+
